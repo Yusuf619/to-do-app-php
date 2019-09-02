@@ -1,19 +1,3 @@
-<!-- Session Start -->
-<?php
-   session_start();
-   // Getting Data For Actions In ToDo
-   if(isset($_GET['to'])){
-       $key = $_GET['to'];
-       if($_GET['action'] == 'done'){
-          $_SESSION['todo'][$key]['done']=true;
-       }else if($_GET['action'] == 'cancel'){
-         $_SESSION['todo'][$key]['done']=false;
-       }else{
-           unset( $_SESSION['todo'][$key]);
-       }
-   }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,26 +5,49 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link href="css/style.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
    <title>MY TO DO LIST</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
-<body class="img" background="img/bg.jpg">
+
+
+<body class="img" background="img/bg2.jpg">
    <!-- Start Bootstrap Columns And Following Naming Convention To Align The Items In The Centre Of The Page -->
-   <div class="text-center mt-5 container">
+   <div id="" class="text-center mt-5 container">
        <div class="row">
            <div class="col-sm-2"></div>
                <div class="col-sm-8">
-                   <!-- Creating A Form -->
-                   <form method="post" action="todo.php">
+                   <!-- FORM-->
+                   <form class="form" method="post" action="todo.php">
                        <div class="input-group mt-5 mb-3">
+                           <!-- INPUT -->
                            <input type="text" class="form-control" name="todo_input" placeholder="Item Name :" aria-label="Todo Item" aria-describedby="button-addon2">
                                <div class="input-group-append">
+                                   <!-- ADD BUTTON -->
                                    <button class="btn btn-primary" name="submit" type="submit" id="button-addon2">
                                        Add Task
                                    </button>
                                </div>
                        </div>
                    </form>
+
+                   <!-- PHP  -->
+                   <!-- Session Start -->
+                        <?php
+                        session_start();
+                        // Getting Data For Actions In ToDo
+                        if(isset($_GET['to'])){
+                            $key = $_GET['to'];
+                            if($_GET['action'] == 'done'){
+                                $_SESSION['todo'][$key]['done']=true;
+                            }else if($_GET['action'] == 'cancel'){
+                                $_SESSION['todo'][$key]['done']=false;
+                            }else{
+                                unset( $_SESSION['todo'][$key]);
+                            }
+                        }
+                        ?>
+
                    <!-- Ending A Form -->
                        <?php
                        // Session Super Global
@@ -64,6 +71,8 @@
                <div class="col-sm-2"></div>
        </div>
    </div>
+
+
 <!-- End Bootstrap Columns And Following Naming Convention To Align The Items In The Centre Of The Page -->
    <!-- Start Of Scripts -->
    <!-- Script Libraries -->
@@ -73,6 +82,7 @@
    <!-- Main JS -->
    <script src="js/main.js"></script>
    <!-- End Of Scripts -->
+
 </body>
 </html>
 

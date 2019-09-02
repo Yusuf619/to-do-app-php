@@ -1,7 +1,21 @@
+body{
+  font-family: 'PT Sans', sans-serif !important;
+}
+
 .img{
     width: 100% !important;
     background-attachment: fixed;
     background-position: center !important;
     background-repeat: no-repeat;
     background-size: cover;   
+  }
+
+  form{
+    background-color: red !important;
+  }
+
+  .btn-primary{
+    color: white !important;
+    background-color: gold !important;
+    border: none !important;
   }
