@@ -10,10 +10,6 @@ body{
     background-size: cover;   
   }
 
-  form{
-    background-color: red !important;
-  }
-
   .btn-primary{
     color: white !important;
     background-color: gold !important;
