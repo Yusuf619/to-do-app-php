@@ -1,0 +1,7 @@
+.img{
+    width: 100% !important;
+    background-attachment: fixed;
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: cover;   
+  }
