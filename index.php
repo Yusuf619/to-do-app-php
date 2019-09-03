@@ -13,16 +13,11 @@
 
 
 <body class="img" background="img/bg2.jpg">
-   <!-- Start Bootstrap Columns And Following Naming Convention To Align The Items In The Centre Of The Page -->
+   <!-- NavBar -->
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">MY TO DO LIST <i class="fas fa-clipboard-list"></i></a> 
-
-    <form class="form-inline my-2 my-lg-0">
-   
-    </form>
-  </div>
-</nav>
+        <a class="navbar-brand" href="#">MY TO DO LIST <i class="fas fa-clipboard-list"></i></a> 
+  </nav>
 
 
 
@@ -71,11 +66,11 @@
                                // ForEach For Loop Starts
                                foreach($_SESSION['todo'] as $key => $value){
                                    // Displaying All The Items In A Div And In A Bootstrap Alert Box
-                                   echo '<div class="alert alert-light border shadow-sm pb-4 background-color-black">';
+                                   echo '<div class="alert alert-light border shadow-sm pb-4">';
                                    echo "<li>".$value['todo_item']." ".$date.
                                    '<a class="btn btn-danger float-right" href="index.php?to='. $key.'&action=delete"><i class="fas fa-times"></i></a>'."</li><br>";
                                    echo '</div>';
-                                   // End Of Displaying Items
+
                                }
                                // End ForEach For Loop
                            }
