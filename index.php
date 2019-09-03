@@ -16,7 +16,7 @@
    <!-- Start Bootstrap Columns And Following Naming Convention To Align The Items In The Centre Of The Page -->
 
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">MY TO DO LIST</a>
+  <a class="navbar-brand" href="#">MY TO DO LIST</a><i class="fas fa-clipboard-list"></i>
 
     <form class="form-inline my-2 my-lg-0">
    
